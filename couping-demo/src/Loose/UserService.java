@@ -1,0 +1,22 @@
+package Loose;
+
+public class UserService {
+   public NotificationService notificationService;
+    public UserService(){
+
+    }
+    public UserService(NotificationService notificationService)
+    {
+            this.notificationService = notificationService;
+    }
+    //SMS
+    public void notifyUser(String message)
+    {
+        notificationService.send("Notification hello ");
+    }
+
+    public void setNotificationService(NotificationService notificationService) {
+        this.notificationService = notificationService;
+    }
+}
+
